@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Tue Apr 28 11:20:51 2020
+# Process ID: 3136
+# Current directory: C:/triumf/nuprism/proj2/xu1-nuprism/XU1-NuPRISM/SDK_NuPRISM/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/triumf/nuprism/proj2/xu1-nuprism/XU1-NuPRISM/SDK_NuPRISM/webtalk/webtalk.log
+# Journal file: C:/triumf/nuprism/proj2/xu1-nuprism/XU1-NuPRISM/SDK_NuPRISM/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

@@ -1,0 +1,319 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date             : Tue May 19 17:02:23 2020
+| Host             : DESKTOP-813AKL3 running 64-bit major release  (build 9200)
+| Command          : report_power -file system_top_power_routed.rpt -pb system_top_power_summary_routed.pb -rpx system_top_power_routed.rpx
+| Design           : system_top
+| Device           : xczu6eg-ffvc900-1-i
+| Design State     : routed
+| Grade            : industrial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 4.138        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 3.400        |
+| Device Static (W)        | 0.739        |
+| Effective TJA (C/W)      | 1.4          |
+| Max Ambient (C)          | 94.3         |
+| Junction Temperature (C) | 30.7         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.102 |       29 |       --- |             --- |
+| CLB Logic                |     0.049 |    36029 |       --- |             --- |
+|   LUT as Logic           |     0.026 |    10211 |    214604 |            4.76 |
+|   LUT as Distributed RAM |     0.015 |      272 |    144000 |            0.19 |
+|   LUT as Shift Register  |     0.005 |     1506 |    144000 |            1.05 |
+|   Register               |     0.003 |    18107 |    429208 |            4.22 |
+|   CARRY8                 |    <0.001 |      210 |     34260 |            0.61 |
+|   Others                 |     0.000 |     2405 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      355 |    274080 |            0.13 |
+| Signals                  |     0.041 |    27309 |       --- |             --- |
+| Block RAM                |     0.011 |     23.5 |       714 |            3.29 |
+| MMCM                     |     0.192 |        0 |       --- |             --- |
+| I/O                      |     0.128 |       79 |       204 |           38.73 |
+| SYSMON                   |     0.005 |        1 |       --- |             --- |
+| PS8                      |     2.872 |        1 |       --- |             --- |
+| Static Power             |     0.739 |          |           |                 |
+|   PS Static              |     0.100 |          |           |                 |
+|   PL Static              |     0.638 |          |           |                 |
+| Total                    |     4.138 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------------+-------------+-----------+-------------+------------+
+| Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------------+-------------+-----------+-------------+------------+
+| Vccint          |       0.850 |     0.464 |       0.245 |      0.219 |
+| Vccint_io       |       0.850 |     0.060 |       0.024 |      0.036 |
+| Vccbram         |       0.850 |     0.005 |       0.002 |      0.003 |
+| Vccaux          |       1.800 |     0.298 |       0.106 |      0.192 |
+| Vccaux_io       |       1.800 |     0.067 |       0.034 |      0.033 |
+| Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18          |       1.800 |     0.025 |       0.025 |      0.000 |
+| Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |
+| VCC_PSINTFP     |       0.850 |     1.051 |       1.014 |      0.037 |
+| VCC_PSINTLP     |       0.850 |     0.284 |       0.276 |      0.008 |
+| VPS_MGTRAVCC    |       0.850 |     0.068 |       0.067 |      0.001 |
+| VCC_PSINTFP_DDR |       0.850 |     0.877 |       0.873 |      0.005 |
+| VCC_PSPLL       |       1.200 |     0.072 |       0.070 |      0.002 |
+| VPS_MGTRAVTT    |       1.800 |     0.009 |       0.008 |      0.001 |
+| VCCO_PSDDR_504  |       1.200 |     0.746 |       0.712 |      0.034 |
+| VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |
+| VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |
+| VCC_PSDDR_PLL   |       1.800 |     0.013 |       0.012 |      0.001 |
+| VCCO_PSIO0_500  |       1.800 |     0.001 |       0.000 |      0.001 |
+| VCCO_PSIO1_501  |       1.800 |     0.001 |       0.000 |      0.001 |
+| VCCO_PSIO2_502  |       1.800 |     0.001 |       0.000 |      0.001 |
+| VCCO_PSIO3_503  |       1.800 |     0.001 |       0.000 |      0.001 |
+| VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |
+| MGTAVcc         |       0.900 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt         |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux       |       1.800 |     0.000 |       0.000 |      0.000 |
++-----------------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.4                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 2.0                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| Clock                                                                                               | Domain                                                               | Constraint (ns) |
++-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| ADC1_DCLK_p                                                                                         | ADC1_DCLK_p                                                          |             2.7 |
+| clk_out1_b65_mmcm_b64_375p0_clk_wiz_0_b65_mmcm                                                      | serdes_clock_b65/inst/clk_out1_b65_mmcm_b64_375p0_clk_wiz_0_b65_mmcm |             2.7 |
+| clk_out1_b65_mmcm_b64_375p0_clk_wiz_0_b65_mmcm_1                                                    | serdes_clock_b65/inst/clk_out1_b65_mmcm_b64_375p0_clk_wiz_0_b65_mmcm |             2.7 |
+| clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll                                                            | serdes_clock_b64/inst/clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll       |             2.7 |
+| clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll_1                                                          | serdes_clock_b64/inst/clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll       |             2.7 |
+| clk_out2_b65_mmcm_b65_375p0_clk_wiz_0_b65_mmcm                                                      | serdes_clock_b65/inst/clk_out2_b65_mmcm_b65_375p0_clk_wiz_0_b65_mmcm |             2.7 |
+| clk_out2_b65_mmcm_b65_375p0_clk_wiz_0_b65_mmcm_1                                                    | serdes_clock_b65/inst/clk_out2_b65_mmcm_b65_375p0_clk_wiz_0_b65_mmcm |             2.7 |
+| clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll                                                             | serdes_clock_b64/inst/clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll        |            16.0 |
+| clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll_1                                                           | serdes_clock_b64/inst/clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll        |            16.0 |
+| clk_out4_b65_62p5_clk_wiz_0_b65_mmcm                                                                | serdes_clock_b65/inst/clk_out4_b65_62p5_clk_wiz_0_b65_mmcm           |            16.0 |
+| clk_out4_b65_62p5_clk_wiz_0_b65_mmcm_1                                                              | serdes_clock_b65/inst/clk_out4_b65_62p5_clk_wiz_0_b65_mmcm           |            16.0 |
+| clk_pl_0                                                                                            | MercuryXU1_i/MercuryXU1_i/zynq_ultra_ps_e_0/U0/pl_clk_unbuffered[0]  |            10.0 |
+| clk_pl_1                                                                                            | MercuryXU1_i/MercuryXU1_i/zynq_ultra_ps_e_0/U0/pl_clk_unbuffered[1]  |            20.0 |
+| clkfbout_clk_wiz_0_b65_mmcm                                                                         | serdes_clock_b65/inst/clkfbout_clk_wiz_0_b65_mmcm                    |             2.7 |
+| clkfbout_clk_wiz_0_b65_mmcm_1                                                                       | serdes_clock_b65/inst/clkfbout_clk_wiz_0_b65_mmcm                    |             2.7 |
+| clkfbout_clk_wiz_1_b64_b66_pll                                                                      | serdes_clock_b64/inst/clkfbout_clk_wiz_1_b64_b66_pll                 |             2.7 |
+| clkfbout_clk_wiz_1_b64_b66_pll_1                                                                    | serdes_clock_b64/inst/clkfbout_clk_wiz_1_b64_b66_pll                 |             2.7 |
+| clkin1                                                                                              | ADC1_DCLK_p                                                          |             2.7 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/in0    |            50.0 |
+| s_serDiv2Clk                                                                                        | Ad9229Core_b65/s_serDiv2Clk                                          |             5.3 |
+| s_serDiv2Clk_1                                                                                      | Ad9229Core_b64/s_serDiv2Clk                                          |             5.3 |
+| s_serDiv2Clk_2                                                                                      | Ad9229Core_b65/s_serDiv2Clk                                          |             5.3 |
+| s_serDiv2Clk_3                                                                                      | Ad9229Core_b64/s_serDiv2Clk                                          |             5.3 |
++-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------------+-----------+
+| Name                                     | Power (W) |
++------------------------------------------+-----------+
+| system_top                               |     3.400 |
+|   Ad9229Core_b64                         |     0.083 |
+|     Ad9229Deserializer_INST              |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[0].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[0].U_DataIn                 |     0.003 |
+|     GEN_DATA[1].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[1].U_DataIn                 |     0.003 |
+|     GEN_DATA[2].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[2].U_DataIn                 |     0.003 |
+|     GEN_DATA[3].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[3].U_DataIn                 |     0.003 |
+|     GEN_DATA[4].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[4].U_DataIn                 |     0.003 |
+|     GEN_DATA[5].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[5].U_DataIn                 |     0.003 |
+|     GEN_DATA[6].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[6].U_DataIn                 |     0.003 |
+|     GEN_DATA[7].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[7].U_DataIn                 |     0.003 |
+|     GEN_DATA[8].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[8].U_DataIn                 |     0.003 |
+|     GEN_DATA[9].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[9].U_DataIn                 |     0.003 |
+|     U_FrameIn                            |     0.003 |
+|   Ad9229Core_b65                         |     0.135 |
+|     Ad9229Deserializer_INST              |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[0].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[0].U_DataIn                 |     0.003 |
+|     GEN_DATA[10].Ad9229Deserializer_INST |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[10].U_DataIn                |     0.003 |
+|     GEN_DATA[11].Ad9229Deserializer_INST |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[11].U_DataIn                |     0.003 |
+|     GEN_DATA[12].Ad9229Deserializer_INST |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[12].U_DataIn                |     0.003 |
+|     GEN_DATA[13].Ad9229Deserializer_INST |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[13].U_DataIn                |     0.003 |
+|     GEN_DATA[14].Ad9229Deserializer_INST |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[14].U_DataIn                |     0.003 |
+|     GEN_DATA[15].Ad9229Deserializer_INST |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[15].U_DataIn                |     0.003 |
+|     GEN_DATA[16].Ad9229Deserializer_INST |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[16].U_DataIn                |     0.003 |
+|     GEN_DATA[17].Ad9229Deserializer_INST |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[17].U_DataIn                |     0.003 |
+|     GEN_DATA[1].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[1].U_DataIn                 |     0.003 |
+|     GEN_DATA[2].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[2].U_DataIn                 |     0.003 |
+|     GEN_DATA[3].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[3].U_DataIn                 |     0.003 |
+|     GEN_DATA[4].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[4].U_DataIn                 |     0.003 |
+|     GEN_DATA[5].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[5].U_DataIn                 |     0.003 |
+|     GEN_DATA[6].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[6].U_DataIn                 |     0.003 |
+|     GEN_DATA[7].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[7].U_DataIn                 |     0.003 |
+|     GEN_DATA[8].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[8].U_DataIn                 |     0.003 |
+|     GEN_DATA[9].Ad9229Deserializer_INST  |     0.004 |
+|       U_SyncFifo                         |     0.003 |
+|     GEN_DATA[9].U_DataIn                 |     0.003 |
+|     U_FrameIn                            |     0.003 |
+|   MercuryXU1_i                           |     2.895 |
+|     MercuryXU1_i                         |     2.886 |
+|       axi_interconnect_0                 |     0.005 |
+|       system_management_wiz_0            |     0.006 |
+|       zynq_ultra_ps_e_0                  |     2.874 |
+|     ps_spi_1_io0_iobuf                   |     0.001 |
+|     ps_spi_1_io1_iobuf                   |     0.001 |
+|     ps_spi_1_sck_iobuf                   |     0.001 |
+|     ps_spi_1_ss_iobuf                    |     0.001 |
+|   dbg_hub                                |     0.002 |
+|     inst                                 |     0.002 |
+|       BSCANID.u_xsdbm_id                 |     0.002 |
+|   serdes_clock_b64                       |     0.101 |
+|     inst                                 |     0.101 |
+|   serdes_clock_b65                       |     0.102 |
+|     inst                                 |     0.102 |
+|       clkin1_ibufds                      |     0.004 |
+|   u_ila_0                                |     0.024 |
+|     inst                                 |     0.024 |
+|       ila_core_inst                      |     0.024 |
+|   u_ila_1                                |     0.020 |
+|     inst                                 |     0.020 |
+|       ila_core_inst                      |     0.020 |
+|   u_ila_2                                |     0.007 |
+|     inst                                 |     0.007 |
+|       ila_core_inst                      |     0.007 |
+|   u_ila_3                                |     0.017 |
+|     inst                                 |     0.017 |
+|       ila_core_inst                      |     0.017 |
+|   u_ila_4                                |     0.009 |
+|     inst                                 |     0.009 |
+|       ila_core_inst                      |     0.008 |
++------------------------------------------+-----------+
+
+

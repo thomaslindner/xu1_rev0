@@ -1,0 +1,743 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Tue May 19 17:02:08 2020
+| Host         : DESKTOP-813AKL3 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file system_top_methodology_drc_routed.rpt -pb system_top_methodology_drc_routed.pb -rpx system_top_methodology_drc_routed.rpx
+| Design       : system_top
+| Device       : xczu6eg-ffvc900-1-i
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_system_top
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 139
++-----------+----------+------------------------------------------------------------------+------------+
+| Rule      | Severity | Description                                                      | Violations |
++-----------+----------+------------------------------------------------------------------+------------+
+| BSCK-10   | Warning  | ISERDESE3_parallel_clock_nets                                    | 30         |
+| CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 2          |
+| LUTAR-1   | Warning  | LUT drives async reset alert                                     | 5          |
+| TIMING-6  | Warning  | No common primary clock between related clocks                   | 23         |
+| TIMING-7  | Warning  | No common node between related clocks                            | 1          |
+| TIMING-9  | Warning  | Unknown CDC Logic                                                | 1          |
+| TIMING-17 | Warning  | Non-clocked sequential cell                                      | 2          |
+| TIMING-18 | Warning  | Missing input or output delay                                    | 68         |
+| TIMING-35 | Warning  | No common node in paths with the same clock                      | 1          |
+| CLKC-5    | Advisory | BUFGCE with constant CE has BUFG driver                          | 2          |
+| CLKC-24   | Advisory | MMCME4 with ZHOLD drives sequential IO not with CLKOUT0          | 1          |
+| CLKC-26   | Advisory | MMCME4 with BUF_IN drives sequential IO with CLKOUT0             | 1          |
+| CLKC-30   | Advisory | MMCME4 not driven by IO has BUFG in feedback loop                | 1          |
+| CLKC-56   | Advisory | MMCME4 with global clock driver has no LOC                       | 1          |
++-----------+----------+------------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+BSCK-10#1 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b64/Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b64/Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b64/U_serClk) and Ad9229Core_b64/Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b64/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#2 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b64/GEN_DATA[0].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b64/GEN_DATA[0].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b64/U_serClk) and Ad9229Core_b64/GEN_DATA[0].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b64/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#3 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b64/GEN_DATA[1].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b64/GEN_DATA[1].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b64/U_serClk) and Ad9229Core_b64/GEN_DATA[1].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b64/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#4 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b64/GEN_DATA[2].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b64/GEN_DATA[2].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b64/U_serClk) and Ad9229Core_b64/GEN_DATA[2].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b64/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#5 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b64/GEN_DATA[3].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b64/GEN_DATA[3].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b64/U_serClk) and Ad9229Core_b64/GEN_DATA[3].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b64/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#6 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b64/GEN_DATA[4].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b64/GEN_DATA[4].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b64/U_serClk) and Ad9229Core_b64/GEN_DATA[4].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b64/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#7 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b64/GEN_DATA[5].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b64/GEN_DATA[5].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b64/U_serClk) and Ad9229Core_b64/GEN_DATA[5].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b64/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#8 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b64/GEN_DATA[6].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b64/GEN_DATA[6].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b64/U_serClk) and Ad9229Core_b64/GEN_DATA[6].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b64/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#9 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b64/GEN_DATA[7].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b64/GEN_DATA[7].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b64/U_serClk) and Ad9229Core_b64/GEN_DATA[7].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b64/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#10 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b64/GEN_DATA[8].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b64/GEN_DATA[8].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b64/U_serClk) and Ad9229Core_b64/GEN_DATA[8].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b64/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#11 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b64/GEN_DATA[9].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b64/GEN_DATA[9].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b64/U_serClk) and Ad9229Core_b64/GEN_DATA[9].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b64/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#12 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#13 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[0].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[0].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[0].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#14 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[10].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[10].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[10].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#15 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[11].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[11].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[11].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#16 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[12].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[12].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[12].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#17 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[13].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[13].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[13].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#18 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[14].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[14].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[14].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#19 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[15].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[15].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[15].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#20 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[16].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[16].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[16].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#21 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[17].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[17].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[17].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#22 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[1].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[1].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[1].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#23 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[2].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[2].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[2].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#24 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[3].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[3].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[3].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#25 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[4].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[4].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[4].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#26 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[5].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[5].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[5].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#27 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[6].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[6].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[6].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#28 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[7].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[7].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[7].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#29 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[8].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[8].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[8].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+BSCK-10#30 Warning
+ISERDESE3_parallel_clock_nets  
+ISERDESE3 cell Ad9229Core_b65/GEN_DATA[9].Ad9229Deserializer_INST/U_ISERDESE3 has sub-optimal clocking topology for pins Ad9229Core_b65/GEN_DATA[9].Ad9229Deserializer_INST/U_ISERDESE3/CLK (driver: Ad9229Core_b65/U_serClk) and Ad9229Core_b65/GEN_DATA[9].Ad9229Deserializer_INST/U_ISERDESE3/CLKDIV (driver: Ad9229Core_b65/U_BUFGCE_DIV). These pins should be driven by parallel global clock buffers by utilizing BUFGCE_DIV cell for the ISERDESE3 CLKDIV pin.
+Related violations: <none>
+
+CKLD-2#1 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net MercuryXU1_i/ps_spi_0_sck_iobuf/O is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): MercuryXU1_i/ps_spi_0_sck_iobuf/IO
+Related violations: <none>
+
+CKLD-2#2 Warning
+Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
+Clock net MercuryXU1_i/ps_spi_1_sck_iobuf/O is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): MercuryXU1_i/ps_spi_1_sck_iobuf/IO
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_sel[0]_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[10]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[11]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[12]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[13]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[14]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[15]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[6]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[7]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[8]/CLR, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[9]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-6#1 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll and clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll] -to [get_clocks clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll_1]
+Related violations: <none>
+
+TIMING-6#2 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll_1 and clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll_1] -to [get_clocks clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll]
+Related violations: <none>
+
+TIMING-6#3 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll_1_DIV2_INV and s_serDiv2Clk_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll_1_DIV2_INV] -to [get_clocks s_serDiv2Clk_1]
+Related violations: <none>
+
+TIMING-6#4 Warning
+No common primary clock between related clocks  
+The clocks clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll_DIV2_INV and s_serDiv2Clk_3 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_pll_375p0_clk_wiz_1_b64_b66_pll_DIV2_INV] -to [get_clocks s_serDiv2Clk_3]
+Related violations: <none>
+
+TIMING-6#5 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_b65_mmcm_b65_375p0_clk_wiz_0_b65_mmcm_1_DIV2_INV and s_serDiv2Clk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_b65_mmcm_b65_375p0_clk_wiz_0_b65_mmcm_1_DIV2_INV] -to [get_clocks s_serDiv2Clk]
+Related violations: <none>
+
+TIMING-6#6 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_b65_mmcm_b65_375p0_clk_wiz_0_b65_mmcm_DIV2_INV and s_serDiv2Clk_2 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_b65_mmcm_b65_375p0_clk_wiz_0_b65_mmcm_DIV2_INV] -to [get_clocks s_serDiv2Clk_2]
+Related violations: <none>
+
+TIMING-6#7 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll and clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll] -to [get_clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll_1]
+Related violations: <none>
+
+TIMING-6#8 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll and s_serDiv2Clk_3 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll] -to [get_clocks s_serDiv2Clk_3]
+Related violations: <none>
+
+TIMING-6#9 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll_1 and clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll_1] -to [get_clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll]
+Related violations: <none>
+
+TIMING-6#10 Warning
+No common primary clock between related clocks  
+The clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll_1 and s_serDiv2Clk_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll_1] -to [get_clocks s_serDiv2Clk_1]
+Related violations: <none>
+
+TIMING-6#11 Warning
+No common primary clock between related clocks  
+The clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm and clk_out4_b65_62p5_clk_wiz_0_b65_mmcm_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm] -to [get_clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm_1]
+Related violations: <none>
+
+TIMING-6#12 Warning
+No common primary clock between related clocks  
+The clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm and s_serDiv2Clk_2 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm] -to [get_clocks s_serDiv2Clk_2]
+Related violations: <none>
+
+TIMING-6#13 Warning
+No common primary clock between related clocks  
+The clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm_1 and clk_out4_b65_62p5_clk_wiz_0_b65_mmcm are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm_1] -to [get_clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm]
+Related violations: <none>
+
+TIMING-6#14 Warning
+No common primary clock between related clocks  
+The clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm_1 and s_serDiv2Clk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm_1] -to [get_clocks s_serDiv2Clk]
+Related violations: <none>
+
+TIMING-6#15 Warning
+No common primary clock between related clocks  
+The clocks clk_pl_0 and clk_pl_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_pl_0] -to [get_clocks clk_pl_1]
+Related violations: <none>
+
+TIMING-6#16 Warning
+No common primary clock between related clocks  
+The clocks s_serDiv2Clk and clk_out4_b65_62p5_clk_wiz_0_b65_mmcm_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks s_serDiv2Clk] -to [get_clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm_1]
+Related violations: <none>
+
+TIMING-6#17 Warning
+No common primary clock between related clocks  
+The clocks s_serDiv2Clk and s_serDiv2Clk_2 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks s_serDiv2Clk] -to [get_clocks s_serDiv2Clk_2]
+Related violations: <none>
+
+TIMING-6#18 Warning
+No common primary clock between related clocks  
+The clocks s_serDiv2Clk_1 and clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks s_serDiv2Clk_1] -to [get_clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll_1]
+Related violations: <none>
+
+TIMING-6#19 Warning
+No common primary clock between related clocks  
+The clocks s_serDiv2Clk_1 and s_serDiv2Clk_3 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks s_serDiv2Clk_1] -to [get_clocks s_serDiv2Clk_3]
+Related violations: <none>
+
+TIMING-6#20 Warning
+No common primary clock between related clocks  
+The clocks s_serDiv2Clk_2 and clk_out4_b65_62p5_clk_wiz_0_b65_mmcm are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks s_serDiv2Clk_2] -to [get_clocks clk_out4_b65_62p5_clk_wiz_0_b65_mmcm]
+Related violations: <none>
+
+TIMING-6#21 Warning
+No common primary clock between related clocks  
+The clocks s_serDiv2Clk_2 and s_serDiv2Clk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks s_serDiv2Clk_2] -to [get_clocks s_serDiv2Clk]
+Related violations: <none>
+
+TIMING-6#22 Warning
+No common primary clock between related clocks  
+The clocks s_serDiv2Clk_3 and clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks s_serDiv2Clk_3] -to [get_clocks clk_out2_pll_62p5_clk_wiz_1_b64_b66_pll]
+Related violations: <none>
+
+TIMING-6#23 Warning
+No common primary clock between related clocks  
+The clocks s_serDiv2Clk_3 and s_serDiv2Clk_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks s_serDiv2Clk_3] -to [get_clocks s_serDiv2Clk_1]
+Related violations: <none>
+
+TIMING-7#1 Warning
+No common node between related clocks  
+The clocks clk_pl_0 and clk_pl_1 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_pl_0] -to [get_clocks clk_pl_1]
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin MercuryXU1_i/MercuryXU1_i/zynq_ultra_ps_e_0/U0/PS8_i/EMIOSPI0SCLKI is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin MercuryXU1_i/MercuryXU1_i/zynq_ultra_ps_e_0/U0/PS8_i/EMIOSPI1SCLKI is not reached by a timing clock
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DA0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DA0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DA1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DA1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DB0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DB0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DB1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DB1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DC0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DC0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DC1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DC1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DD0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DD0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DD1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_DD1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_FCLK_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_FCLK_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An input delay is missing on ADC0_SEN relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DA0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DA0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DA1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DA1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DB0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DB0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DB1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DB1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DC0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DC0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DC1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#31 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_DC1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#32 Warning
+Missing input or output delay  
+An input delay is missing on ADC1_SEN relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#33 Warning
+Missing input or output delay  
+An input delay is missing on ADC2_SEN relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#34 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DA0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#35 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DA0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#36 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DA1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#37 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DA1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#38 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DB0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#39 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DB0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#40 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DB1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#41 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DB1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#42 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DC0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#43 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DC0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#44 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DC1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#45 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_DC1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#46 Warning
+Missing input or output delay  
+An input delay is missing on ADC3_SEN relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#47 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DA0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#48 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DA0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#49 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DA1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#50 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DA1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#51 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DB0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#52 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DB0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#53 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DB1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#54 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DB1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#55 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DC0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#56 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DC0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#57 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DC1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#58 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DC1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#59 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DD0_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#60 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DD0_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#61 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DD1_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#62 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_DD1_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#63 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_FCLK_n relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#64 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_FCLK_p relative to clock(s) ADC1_DCLK_p, clkin1
+Related violations: <none>
+
+TIMING-18#65 Warning
+Missing input or output delay  
+An input delay is missing on ADC4_SEN relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#66 Warning
+Missing input or output delay  
+An input delay is missing on ADC_PDN relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#67 Warning
+Missing input or output delay  
+An input delay is missing on ADC_RST relative to clock(s) clk_pl_0
+Related violations: <none>
+
+TIMING-18#68 Warning
+Missing input or output delay  
+An output delay is missing on Led2_N relative to clock(s) clk_pl_1
+Related violations: <none>
+
+TIMING-35#1 Warning
+No common node in paths with the same clock  
+The clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK has paths without a common node. First path found between dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/state_reg[1]/C and dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TDO. Please review clock constraints
+Related violations: <none>
+
+CLKC-5#1 Advisory
+BUFGCE with constant CE has BUFG driver  
+The BUFGCE cell Ad9229Core_b64/U_serClk Ad9229Core_b64/U_serClk/I pin (and CE pin not ACTIVE) is driven by BUFGCE clock buffer serdes_clock_b64/inst/clkout1_buf. This may be an unnecessary use of multiple clocking resources and should be reviewed. Cascaded buffers introduce skew that can lead to difficult or impossible timing closure.
+Related violations: <none>
+
+CLKC-5#2 Advisory
+BUFGCE with constant CE has BUFG driver  
+The BUFGCE cell Ad9229Core_b65/U_serClk Ad9229Core_b65/U_serClk/I pin (and CE pin not ACTIVE) is driven by BUFGCE clock buffer serdes_clock_b65/inst/clkout2_buf. This may be an unnecessary use of multiple clocking resources and should be reviewed. Cascaded buffers introduce skew that can lead to difficult or impossible timing closure.
+Related violations: <none>
+
+CLKC-24#1 Advisory
+MMCME4 with ZHOLD drives sequential IO not with CLKOUT0  
+The MMCME4 cell serdes_clock_b65/inst/mmcme4_adv_inst has COMPENSATION value ZHOLD, but CLKOUT1 output drives sequential IO cells. In order to achieve insertion delay and phase-alignment for the IO sequential cells, CLKOUT0 must be used.
+Related violations: <none>
+
+CLKC-26#1 Advisory
+MMCME4 with BUF_IN drives sequential IO with CLKOUT0  
+The MMCME4 cell serdes_clock_b64/inst/mmcme4_adv_inst has COMPENSATION value BUF_IN, but CLKOUT0 output drives sequential cells directly connected to ports. In order to achieve insertion delay and phase-alignment for the sequential cells directly connected to ports, a COMPENSATION of ZHOLD must be used. (The problem cell is Ad9229Core_b64/Ad9229Deserializer_INST/U_ISERDESE3.)
+Related violations: <none>
+
+CLKC-30#1 Advisory
+MMCME4 not driven by IO has BUFG in feedback loop  
+The MMCME4 cell serdes_clock_b64/inst/mmcme4_adv_inst has a BUFGCE serdes_clock_b64/inst/clkf_buf clock buffer in the feedback loop, but the clock input is not directly driven by an I/O to create a Zero Delay Buffer Clock (a common use for having a buffer in the feedback loop). If there is no specific need for this buffer in the feedback loop (e.g. no timing paths between CLKINx/CLKOUTx domains or low latency requirement), then it is suggested to remove that BUFG* from the feedback path. This will allow for a lower power solution and free the clock resource for other purposes.
+Related violations: <none>
+
+CLKC-56#1 Advisory
+MMCME4 with global clock driver has no LOC  
+The MMCME4_ADV cell serdes_clock_b64/inst/mmcme4_adv_inst CLKIN1 or CLKIN2 pin is driven by global Clock buffer(s) serdes_clock_b64/inst/clkin1_bufg and does not have a LOC constraint. It is recommended to LOC the MMCM and use the CLOCK_DEDICATED_ROUTE constraint on the net(s) driven by the global Clock buffer(s).
+Related violations: <none>
+
+

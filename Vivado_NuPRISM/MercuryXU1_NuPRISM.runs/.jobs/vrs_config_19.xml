@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="MercuryNuPRISM_synth" LaunchDir="C:/triumf/nuprism/proj/XU1-NuPRISM/Vivado_NuPRISM/MercuryXU1_NuPRISM.runs/MercuryNuPRISM_synth" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="MercuryNuPRISM_impl" LaunchDir="C:/triumf/nuprism/proj/XU1-NuPRISM/Vivado_NuPRISM/MercuryXU1_NuPRISM.runs/MercuryNuPRISM_impl" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="MercuryNuPRISM_synth"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
